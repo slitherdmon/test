@@ -44,6 +44,9 @@
             <p id="uv-error"></p>
             <pre id="uv-error-code"></pre>
           </div>
+          <div class="cloakbtn">
+               <button class="cloakbtnn" onclick="openCloak()">Cloak</button>
+          </div>
         
       </div>
       <script src="stars.js"></script>
@@ -53,5 +56,33 @@
       <script src="register-sw.js" charset="UTF-8" defer></script>
       <script src="search.js" charset="UTF-8" defer></script>
       <script src="index.js" charset="UTF-8" defer></script>
+      <script>
+         function openCloak() {
+            var win = window.open()
+            win.document.body.style.margin='0';
+            var url = '/'
+            var iframe = win.document.createElement('iframe')
+            iframe.style.height='100%';
+            iframe.style.width='100%';
+            iframe.style.border='none';
+            iframe.src = url
+            win.document.body.appendChild(iframe)
+         }
+      </script>
+      <style>
+         .cloakbtnn {
+            width: 110px;
+            height: 35px;
+            background-color: transparent;
+            color: white;
+            border: 1px solid;
+            border-radius: 15px;
+         }
+         .cloakbtnn:hover {
+            border-radius: 7px;
+            cursor: pointer;
+            background-color: rgba(216, 216, 216, 0.036);
+         }
+      </style>
    </body>
 </html>
